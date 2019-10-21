@@ -1,4 +1,4 @@
-#GET RANDOM ELEMENT IN LIST BY PRE FIXED RATE
+## GET RANDOM ELEMENT IN LIST BY PRE FIXED RATE
 ```
 /**
  * return a random element in list by it own rate
