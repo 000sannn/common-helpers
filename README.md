@@ -27,3 +27,44 @@ function randomByRatio(list) {
     return list[Math.floor(Math.random() * list.length)];
 }
 ```
+
+## RETURN DATE BY DEFINED FORMAT
+```javascript
+const formatDateTime = (rawDate, format = 'mm-dd-yyyy h:m') => {
+    let date = new Date();
+
+    if (rawDate) {
+        try {
+            const timestamp = Number(rawDate);
+            const time = isNaN(timestamp) ? rawDate : timestamp;
+            date = new Date(time);
+        } catch (e) {
+            date = new Date(rawDate);
+        }
+    }
+
+
+    const months = date.getMonth() + 1;
+    const days = date.getDate();
+    const years = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    const mm = months < 10 ? "0" + months : months;
+    const dd = days < 10 ? "0" + days : days;
+    const yyyy = years;
+
+    const h = hours < 10 ? "0" + hours : hours;
+    const m = minutes < 10 ? "0" + minutes : minutes;
+    const s = seconds < 10 ? "0" + minutes : seconds;
+
+    const formatedTime = { mm, dd, yyyy, h, m, s };
+    for (const timeUnit in formatedTime) {
+        format = format.replace(timeUnit, formatedTime[timeUnit]);
+    }
+
+    return format;
+}
+
+```
