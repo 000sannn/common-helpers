@@ -1,4 +1,5 @@
 #GET RANDOM ELEMENT IN LIST BY PRE FIXED RATE
+```
 /**
  * return a random element in list by it own rate
  * @param {object} list 
@@ -25,3 +26,4 @@ function randomByRatio(list) {
 
     return list[Math.floor(Math.random() * list.length)];
 }
+```
