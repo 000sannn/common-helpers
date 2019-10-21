@@ -1,5 +1,5 @@
 ## GET RANDOM ELEMENT IN LIST BY PRE FIXED RATE
-```
+```javascript
 /**
  * return a random element in list by it own rate
  * @param {object} list 
